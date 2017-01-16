@@ -1,10 +1,9 @@
 ﻿namespace NinetyNine.Tests
+open Xunit
+open NinetyNine.Question1To10
+open Swensen.Unquote
 
 module Question1Tests =
-    open Xunit
-    open NinetyNine.Question1To10
-    open Swensen.Unquote
-
     [<Fact>]
     let EmptyList_ShouldReturnNone() =
         test <@ myLast [] = None @>
@@ -18,10 +17,6 @@ module Question1Tests =
         test <@ myLast ['x'; 'y'; 'z'] = Some 'z' @>
 
 module Question2Tests =
-    open Xunit
-    open NinetyNine.Question1To10
-    open Swensen.Unquote
-
     [<Fact>]
     let EmptyList_ShouldReturnNone() =
         test <@ myButLast [] = None @>
