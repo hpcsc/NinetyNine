@@ -10,3 +10,11 @@ module Question1To10 =
         | [] | [_] -> None
         | [h;t] -> Some h
         | _::t -> myButLast t
+
+    let elementAt ls index =
+        let rec loop current = function
+            | h::_ when index = current -> Some h
+            | _::t when index > current -> loop (current + 1) t
+            | _ -> None
+
+        loop 1 ls
