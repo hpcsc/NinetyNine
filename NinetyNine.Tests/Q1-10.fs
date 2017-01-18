@@ -41,3 +41,21 @@ module Question3Tests =
     [<Fact>]
     let IndexOfCharacterList_ShouldReturnKthElement() =
         test <@ elementAt (List.ofSeq "abcdef") 3 = Some 'c' @>
+
+module Question4Tests =
+    [<Fact>]
+    let EmptyList_ReturnZero() =
+        test <@ myLength [] = 0 @>
+
+    [<Fact>]
+    let NonEmptyList_ReturnListLength() =
+        test <@ myLength [1; 2; 3; 4] = 4 @>
+
+module Question5Tests =
+    [<Fact>]
+    let EmptyList_ReturnEmptyList() =
+        test <@ myReverse [] = [] @>
+
+    [<Fact>]
+    let NonEmptyList_ReturnReversedList() =
+        test <@ myReverse [1; 2; 3; 4] = [4; 3; 2; 1] @>

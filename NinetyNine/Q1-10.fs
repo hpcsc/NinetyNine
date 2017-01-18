@@ -18,3 +18,14 @@ module Question1To10 =
             | _ -> None
 
         loop 1 ls
+
+    let rec myLength = function
+        | [] -> 0
+        | _::t -> 1 + myLength t
+
+    let myReverse input =
+        let rec loop acc = function
+            | [] -> acc
+            | h::t -> loop (h::acc) t
+
+        loop [] input
